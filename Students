@@ -1,0 +1,41 @@
+public class Student {
+   public static void main(String args[]) {
+      private int studentId;
+      private String name;
+      private int[] registeredCourses;
+      private int courseCount;
+   }
+   public student(int studentId, String name, int[] registeredCourses, int courseCount) {
+      this.studentId = getStudentId;
+      this.name = getName;
+      this.registeredCourses = getRegisteredCourses;
+      this.courseCount = getCourseCount;
+   }
+   public int getStudentId() {
+      return studentId;
+   }
+   public String getName() {
+      return name;
+   }
+   public int[] getRegisteredCourses() {
+      return registeredCourses;
+   }
+   public void setRegisteredCourses(boolean courses) {
+      registeredCourses = courses;
+   }
+   public int getCourseCount() {
+      return courseCount;
+   }
+   
+   public setCourseCount(int courseCount) {
+      if (courseCount <= 5) {
+         this.courseCount = getCourseCount;
+      } else {
+         throw new IllegalArgument Exception("Max amount of classes: 5")
+      }
+   }
+   
+   public String toString {
+      return "Student Id;" + studentId + "Name of Student:" + name + "Registered courses: " + courseCount;
+   }   
+}

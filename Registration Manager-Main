@@ -1,0 +1,128 @@
+import java.io.*;
+import java.util.*;
+public class RegistrationManager {
+   private static final int maxCourses = 30;
+   private static final int maxStudents = 5;
+   private static Courses[] courses = new Course[maxCourses];
+   private static Students[] students = new Student[maxStudents];
+   private static int courseCount = 0;
+   private static int studentCount = 0;
+   
+   public static void main(String args[]) {
+      loadCourses("courses.txt");
+      loadstudents("students.txt");
+      Scanner scanner = new Scanner(System.in);
+      int choice = 0;
+      
+      while(!exit = 8) {
+         System.out.println("\nMenu:");
+         System.out.println("1. View all courses");
+         System.out.println("2. Search for a course by name");
+         System.out.println("3. Register a student for a course");
+         System.out.println("4. Drop a course for a student");
+         System.out.println("5. View all students and their registered courses");
+         System.out.println("6. Add a new student");
+         System.out.println("7. Add a new course");
+         System.out.println("8. Save changes and exit");
+         System.out.print("Enter choice: ");
+         choice = scanner.nextInt();
+         scanner.nextLine();
+         
+         if(choice == 1) {
+            viewAllCourses();
+         } else if(choice == 2) {
+            searchCourses(Scanner);
+         } else if(choice == 3) {
+            registerCourse(Scanner);
+         } else if(choice == 4) {
+            dropCourse(Scanner);
+         } else if(choice == 5) {
+            viewStudentInfo(Scanner);
+         } else if(choice == 6) {
+            addNewStudent(Scanner);
+         } else if(choice == 7) {
+            addNewCourse(Scanner);
+         } else if(choice == 8) {
+            saveChanges(Scanner);
+         } else {
+            System.out.println("Invalid choice, try again");
+         }
+      }
+      scanner.close();
+   }
+   
+   private static void loadCourses(String fileName) {
+      
+   }
+   
+   private static void loadStudents(String fileName) {
+      
+   }
+   
+   private static void viewAllCourses() {
+      System.out.println("\nCourses: ");
+      for (int i = 0; i < courseCount; i++) {
+         System.out.println(courses[i]);
+      } 
+   }
+   
+   private static void searchCourses(Scanner scanner) {
+      System.out.print("Course name: ");
+      String name = scanner.nextLine();
+      boolean found = false;
+      for(int i = 0; i < courseCount; i++) {
+         if (courses[i].getCourseName.contains(name)) {
+            System.out.println(courses[i]);
+            found = true;
+         }
+      }
+      if (!found) {
+         Syste.out.println("Couse not found");
+      }
+   }
+   
+   private static void registerCourse(Scanner scanner) {
+      System.out.print("Student Id: ");
+      int studentId = scanner.nextInt();
+      System.out.print("Course Id: ");
+      int courseId = scanner.nextInt();
+      
+   }
+   
+   private static void dropCourse(Scanner scanner) {
+      System.out.print("Student Id: ");
+      int studentId = scanner.nextInt();
+      System.out.print("Course Id: ");
+      int courseId = scanner.nextInt();      
+   }
+   
+   private static void viewStudentInfo(Scanner scanner) {
+      System.out.println("All Students: ");
+      for (int i = 0; i < studentCount; i++) {
+         System.out.println(students[i]);
+      }
+   }
+   
+   private static void addNewStudent(Scanner scanner) {
+      System.out.print("Student name: ");
+      int studentName = scanner.nextInt();
+      System.out.print("Student Id: ");
+      int studentId = scanner.nextInt();  
+      students[studentCount++] = new Student(studentId, studentName, new int[5]);     
+   }
+   
+   private static void addNewCourse(Scanner scanner) {
+      System.out.print("Course name: ");
+      int courseName = scanner.nextInt();
+      System.out.print("Course Id: ");
+      int courseId = scanner.nextInt(); 
+      System.out.print("Max capacity of class: ");
+      int maxCapacity = scanner.nextInt();
+      course[courseCount++] = new Course(courseName, courseId, maxCapacity); 
+   }
+   
+   private static void saveChanges(Scanner scanner) {
+      
+   }
+   
+}

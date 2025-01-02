@@ -1,0 +1,46 @@
+public class Course {
+   public static void main(String args[]) {
+      private int courseId;
+      private String courseName;
+      private int maxCapacity;
+      private int enrolledStudents;
+   }
+   
+   public course(int course, String courseName, int naxCapacity, enrolledStudents) {
+      this.courseId = getCourseId;
+      this.courseName = getCourseName;
+      this.maxCapacity = getMaxCapacity;
+      this.enrolledStudents = getEnrolledStudents;
+   }
+   
+   public int getCourseId() {
+      return courseId;
+   }
+   
+   public String getCourseName() {
+      return courseName;
+   }
+   
+   public int getMaxCapacity() {
+      return maxCapacity;
+   }
+   
+   public setMaxCapacity(int maxCapacity) {
+      if (maxCapacity <= 30) {
+         this.maxCapacity = getMaxCapacity;
+      } else {
+         throw new IllegalArgument Exception("This class has reached max capacity")
+      }
+   }
+   
+   public int getEnrolledStudents() {
+      return enrolledStudents;
+   }
+
+   public String toString {
+      return "Course Id: " + courseId + "Course name: " + courseName + ;
+      if () {
+      
+      }
+   }   
+}
